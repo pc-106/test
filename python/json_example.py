@@ -1,0 +1,40 @@
+import json
+data=[{
+    "name":"张三",
+    "age":18,
+    "gender":"男"
+},{
+    "name":"李四",
+    "age":19,
+    "gender":"男"
+}]
+json_str=json.dumps(data,ensure_ascii=False)
+print(json_str)
+d={
+    "name":"张三",
+    "age":18,
+    "gender":"男"
+}
+str2=json.dumps(d,ensure_ascii=False)
+print(str2)
+print(type(str2),type(json_str))
+data1='''[
+{
+        "name":"张三",
+        "age":18,
+        "gender":"男"
+    },
+    {
+        "name":"李四",
+        "age":19,
+        "gender":"男"
+    }
+]
+'''
+l=json.loads(data1)
+print(l)
+print(type(l))
+s='{"name":"张三","age":18,"gender":"男"}'
+d1=json.loads(s)
+print(d1)
+print(type(d1))
